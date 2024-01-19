@@ -1,6 +1,35 @@
 function getShippingCost(country) {
+let delivery;
+switch (country) {
+
+
+case "China":
+delivery = 100;
+break;
+
+
+case  "Chile":
+delivery = 250;
+break;
+    
+case "Australia":
+delivery = 170;
+break;
+        
+case "Jamaica":
+delivery = 120;
+break;
+                     
+default:
+    return "Sorry, there is no delivery to your country";
+}
+
+return `Shipping to ${country} will cost ${delivery} credits`;
 
 }
+
+
+
 
 
 console.log(getShippingCost("Australia")); // "Shipping to Australia will cost 170 credits"
